@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function reverseNumber(num) {
+            if (num < 0) {
+                // Если число отрицательное, обработаем знак и перевернем модуль числа
+                return -reverseNumber(-num);
+            }
+
+            // Преобразуем число в строку, чтобы можно было работать с его цифрами
+            const numStr = num.toString();
+
+            // Используем метод split() для разделения строки на массив символов,
+            // затем метод reverse() для переворачивания массива и join() для объединения обратно в строку
+            const reversedStr = numStr.split('').reverse().join('');
+
+            // Преобразуем строку обратно в число и возвращаем результат
+            const reversedNum = parseInt(reversedStr, 10);
+            return reversedNum;
+        }
+
+        // Пример использования функции
+
+        let num = parseInt(prompt('Введите число:'));
+        //  let reversed = parseInt(prompt('Введите число:'));
+
+        //const num = num;
+        const reversed = reverseNumber(num);
+        alert(`Число ${num} задом наперед: ${reversed}`);
+
+
+
+    </script>
+</body>
+
+</html>

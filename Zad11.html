@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function fibonacci(n) {
+            // Базовые случаи: числа Фибоначчи для n=0 и n=1
+            if (n === 0) {
+                return 0;
+            }
+            if (n === 1) {
+                return 1;
+            }
+
+            // Рекурсивный случай: число Фибоначчи для n равно сумме двух предыдущих чисел Фибоначчи
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+
+        // Пример использования функции
+
+
+        let n = parseInt(prompt('Введите число:'));
+        //const n = 6;
+        const result = fibonacci(n);
+        alert(`Число Фибоначчи с порядковым номером ${n} равно ${result}`);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function power(base, exponent) {
+            // Базовый случай: если степень равна 0, результат всегда равен 1
+            if (exponent === 0) {
+                return 1;
+            }
+
+            // Рекурсивный случай: умножаем базу на результат возведения в степень (n-1)
+            return base * power(base, exponent - 1);
+        }
+
+        // Пример использования функции
+
+        let base = parseInt(prompt('Введите число:'));
+        let exponent = parseInt(prompt('Введите число:'));
+
+
+        //  const base = 2;
+        // const exponent = 3;
+        const result = power(base, exponent);
+        alert(`${base} в степени ${exponent} равно ${result}`);
+
+
+    </script>
+</body>
+
+</html>

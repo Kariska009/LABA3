@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function printNumbersForward(start, end) {
+            if (start <= end) {
+                alert(start);
+                printNumbersForward(start + 1, end);
+            }
+        }
+
+        // Пример использования функции
+
+        let start = parseInt(prompt('Введите число:'));
+        let end = parseInt(prompt('Введите число:'));
+
+        // const start = 1;
+        // const end = 5;
+        alert("Числа в прямом порядке:");
+        printNumbersForward(start, end);
+        function printNumbersReverse(start, end) {
+            if (start <= end) {
+                printNumbersReverse(start + 1, end);
+                alert(start);
+            }
+        }
+
+        // Пример использования функции
+
+        let start2 = parseInt(prompt('Введите число:'));
+        let end2 = parseInt(prompt('Введите число:'));
+
+        //   const start2 = 1;
+        //   const end2 = 5;
+        alert("Числа в обратном порядке:");
+        printNumbersReverse(start2, end2);
+
+
+
+
+    </script>
+</body>
+
+</html>

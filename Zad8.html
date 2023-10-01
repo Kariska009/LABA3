@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function findMaxDigit(num) {
+            // Преобразуем число в строку, чтобы можно было работать с его цифрами
+            const numStr = num.toString();
+
+            // Инициализируем переменную для хранения максимальной цифры
+            let maxDigit = -Infinity;
+
+            // Итерируемся по каждой цифре в строке
+            for (let i = 0; i < numStr.length; i++) {
+                const digit = parseInt(numStr[i], 10);
+
+                // Если текущая цифра больше максимальной, обновляем максимальную цифру
+                if (digit > maxDigit) {
+                    maxDigit = digit;
+                }
+            }
+
+            return maxDigit;
+        }
+
+        // Пример использования функции
+
+        let num = parseInt(prompt('Введите число:'));
+
+
+        //const num = 932874;
+        const max = findMaxDigit(num);
+        alert(`Максимальная цифра в числе ${num} равна ${max}`);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function findFactors(num) {
+            // Создаем пустой массив для хранения множителей
+            const factors = [];
+
+            // Итерируемся от 1 до числа
+            for (let i = 1; i <= num; i++) {
+                // Если i является множителем num, добавляем его в массив
+                if (num % i === 0) {
+                    factors.push(i);
+                }
+            }
+
+            return factors;
+        }
+
+        // Пример использования функции
+
+        let num = parseInt(prompt('Введите число:'));
+       // const num = 12;
+        const factors = findFactors(num);
+        alert(`Множители числа ${num} в возрастающем порядке: ${factors.join(', ')}`);
+
+
+    </script>
+</body>
+
+</html>

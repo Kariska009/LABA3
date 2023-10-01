@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function greatestCommonDivisor(a, b) {
+            // Алгоритм Евклида: пока b не станет равно 0, находим остаток от деления a на b и меняем местами числа
+            while (b !== 0) {
+                const remainder = a % b;
+                a = b;
+                b = remainder;
+            }
+            // НОД находится в переменной "a" после завершения цикла
+            return a;
+        }
+
+        // Пример использования функции
+
+        let num1 = parseInt(prompt('Введите число:'));
+        let num2 = parseInt(prompt('Введите число:'));
+
+        //  const num1 = 48;
+        //   const num2 = 18;
+        const gcd = greatestCommonDivisor(num1, num2);
+        alert(`Наибольший общий делитель чисел ${num1} и ${num2} равен ${gcd}`);
+
+
+
+    </script>
+</body>
+
+</html>

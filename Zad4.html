@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        function sumOfDigits(num) {
+            // Преобразуем число в строку, чтобы можно было работать с его цифрами
+            const numStr = num.toString();
+
+            // Инициализируем переменную для суммы
+            let sum = 0;
+
+            // Итерируемся по каждой цифре в строке и добавляем её к сумме
+            for (let i = 0; i < numStr.length; i++) {
+                sum += parseInt(numStr[i], 10);
+            }
+
+            return sum;
+        }
+
+        // Пример использования функции
+
+        let num = parseInt(prompt('Введите число:'));
+
+        //const num = 1357;
+        const digitSum = sumOfDigits(num);
+        alert(`Сумма цифр числа ${num} равна ${digitSum}`);
+
+
+
+
+    </script>
+</body>
+
+</html>

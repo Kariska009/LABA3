@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function generateParentheses(n) {
+            function generate(partial, openCount, closeCount) {
+                if (partial.length === 2 * n) {
+                    alert(partial);
+                    return;
+                }
+
+                if (openCount < n) {
+                    generate(partial + "(", openCount + 1, closeCount);
+                }
+
+                if (closeCount < openCount) {
+                    generate(partial + ")", openCount, closeCount + 1);
+                }
+            }
+
+            generate("", 0, 0);
+        }
+
+        // Пример использования функции
+
+
+        let n = parseInt(prompt('Введите число:'));
+
+        //const n = 4;
+        alert(`Пары скобок для числа ${n}:`);
+        generateParentheses(n);
+
+
+
+
+
+    </script>
+</body>
+
+</html>
